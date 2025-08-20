@@ -98,7 +98,7 @@ export default function Petitions() {
       <UserInfo />
       <div className="flex flex-col items-center justify-center space-y-8 pb-[100px]">
         <div style={{ width: "100%", position: "sticky", top: "0", textAlign: "center", background: "white" }}>
-          <h1 className="text-2xl font-bold mt-2">Petitions ({petitionCount})</h1>
+          <h1 className="text-2xl font-bold mt-2 text-gray-900">Petitions ({petitionCount})</h1>
           <div className="text-center mt-2 mb-2" style={{ display: "flex", justifyContent: "center" }}>
             <Link
               href="/create-petition"
