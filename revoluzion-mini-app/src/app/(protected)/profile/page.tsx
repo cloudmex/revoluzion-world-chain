@@ -22,9 +22,9 @@ export default function Profile() {
       <Page.Header className="p-0 bg-white border-b border-gray-200">
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
-            <Image 
-              src="/logo.png" 
-              alt="Revoluzion" 
+            <Image
+              src="/logo.png"
+              alt="Revoluzion"
               width={32}
               height={32}
               className="rounded-full"
@@ -33,7 +33,7 @@ export default function Profile() {
             <span className="text-xl font-bold text-black">Revoluzion</span>
           </div>
           <div className="flex items-center gap-2">
-      <UserInfo />
+            <UserInfo />
           </div>
         </div>
       </Page.Header>
@@ -42,7 +42,7 @@ export default function Profile() {
         <div className="px-4 py-6">
           <div className="flex flex-col items-center mb-8">
             <div className="w-24 h-24 rounded-full bg-gray-200 mb-4 flex items-center justify-center">
-                <span className="text-4xl">👤</span>
+              <span className="text-4xl">👤</span>
             </div>
             <h1 className="text-2xl font-bold text-gray-900">{mockProfile.name}</h1>
             {mockProfile.walletAddress && (
@@ -62,7 +62,7 @@ export default function Profile() {
               <p className="text-2xl font-bold text-gray-900 mt-1">{mockProfile.petitionsSigned}</p>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Account Information</h3>
             <div className="space-y-3">
@@ -78,8 +78,10 @@ export default function Profile() {
           </div>
 
           <div className="text-center">
-        <AuthButton />
-      </div>
+            {!mockProfile.walletAddress && (
+              <AuthButton />
+            )}
+          </div>
         </div>
       </Page.Main>
     </Page>
