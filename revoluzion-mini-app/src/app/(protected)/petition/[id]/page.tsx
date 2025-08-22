@@ -116,7 +116,7 @@ export default function PetitionPage() {
       const txPayload = {
         transaction: [
           {
-            address: "0x255286d8D754474e95e4485eCaE0c60D889803F6" as `0x${string}`,
+            address: "0x4DC51aA660F60DB5C77b5c56b6E04D18d05C3772" as `0x${string}`,
             abi: PetitionRegistryABI,
             functionName: 'supportPetition',
             args: [
